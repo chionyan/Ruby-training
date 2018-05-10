@@ -6,6 +6,6 @@ def fizz_buzz(num)
   ret
 end
 
-for num in 1..100
+1.upto(100) do |num|
   puts fizz_buzz(num)
 end
