@@ -1,9 +1,13 @@
 def fizz_buzz(num)
-  ret = ''
-  ret += 'Fizz' if num % 3 == 0
-  ret += 'Buzz' if num % 5 == 0
-  ret = num if ret == ''
-  ret
+  if num % 15 == 0
+    'Fizz Buzz'
+  elsif num % 3 == 0
+    'Fizz'
+  elsif num % 5 == 0
+    'Buzz'
+  else
+    num.to_s
+  end
 end
 
 1.upto(100) do |num|
