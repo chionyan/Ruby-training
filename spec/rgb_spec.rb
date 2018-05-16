@@ -5,7 +5,7 @@ RSpec.describe 'Conversion RGB' do
     it "(0,0,0) -> #000000" do
       expect(to_hex(0, 0, 0)).to eq '#000000'
     end
-    it "(255, 255, 255 -> #ffffff" do
+    it "(255, 255, 255) -> #ffffff" do
       expect(to_hex(255, 255, 255)).to eq '#ffffff'
     end
     it "(4, 60, 120) -> #043c78" do
