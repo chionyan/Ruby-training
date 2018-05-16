@@ -12,5 +12,5 @@ end
 # @return [Array] R、G、Bのそれぞれを10進数の整数に変換した値を配列
 def to_ints(hex)
   r, g, b = hex[1..2], hex[3..4], hex[5..6]
-  [r, g, b].map { |s| s.hex }
+  [r, g, b].map(&:hex)
 end
