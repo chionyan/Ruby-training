@@ -25,4 +25,3 @@ RSpec.describe 'Conversion RGB' do
     end
   end
 end
-
