@@ -8,7 +8,7 @@ def to_hex(r, g, b)
 end
 
 # RGBカラーを表す16 進数文字列を受け取り、R、G、Bのそれぞれを10進数の整数に変換した値を配列として返す。
-# @param [String] hex '#' + RGBカラーを表す16進数文字列
+# @param hex[String] '#' + RGBカラーを表す16進数文字列
 # @return [Array] R、G、Bのそれぞれを10進数の整数に変換した値を配列
 def to_ints(hex)
   r, g, b = hex[1..2], hex[3..4], hex[5..6]
