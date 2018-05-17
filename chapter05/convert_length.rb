@@ -6,9 +6,9 @@
 
 def convert_length (before_length, before_unit, after_unit)
   units = {
-    'm' => 1.0,
-    'ft' => 3.28,
-    'in'=> 39.37
+    m: 1.0,
+    ft: 3.28,
+    in: 39.37
   }
 
   (before_length / units[before_unit] * units[after_unit]).round(2)
