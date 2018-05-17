@@ -3,13 +3,12 @@
 # @param from:[Symbol] 変換元の単位
 # @param to:[Symbol] 変換後の単位
 # @return [Float] 変換後の長さ、端数が出る場合は小数第3位で四捨五入する
+UNITS = {
+  m: 1.0,
+  ft: 3.28,
+  in: 39.37
+}
 
 def convert_length (length, from: :m, to: :m)
-  units = {
-    m: 1.0,
-    ft: 3.28,
-    in: 39.37
-  }
-
-  (length / units[from] * units[to]).round(2)
+  (length / UNITS[from] * UNITS[to]).round(2)
 end
