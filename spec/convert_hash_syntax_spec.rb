@@ -10,6 +10,7 @@ RSpec.describe 'Convert Hash Syntax' do
         :gender  => :female
       }
       TEXT
+
       new_syntax = <<~TEXT
       {
         name: 'Alice',
@@ -17,6 +18,7 @@ RSpec.describe 'Convert Hash Syntax' do
         gender: :female
       }
       TEXT
+      
       expect(convert_hash_syntax(old_syntax)).to eq new_syntax
     end
   end
