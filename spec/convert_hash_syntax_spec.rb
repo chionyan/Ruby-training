@@ -7,7 +7,7 @@ RSpec.describe 'Convert Hash Syntax' do
       {
         :name=> 'Alice',
         :age=>20,
-        :gender => :female 
+        :gender => :female
       }
       TEXT
       new_syntax = <<~TEXT
