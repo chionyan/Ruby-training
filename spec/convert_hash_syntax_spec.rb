@@ -5,9 +5,9 @@ RSpec.describe 'Convert Hash Syntax' do
     it '=>を使った記法のハッシュ文字列を変換すると、=>を使わずコロン(:)を右側に付けたハッシュ文字列になること' do
       old_syntax = <<~TEXT
       {
-        :name=> 'Alice',
+        :name => 'Alice',
         :age=>20,
-        :gender => :female
+        :gender  => :female
       }
       TEXT
       new_syntax = <<~TEXT
