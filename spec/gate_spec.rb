@@ -4,6 +4,7 @@ require_relative '../chapter07/ticket'
 RSpec.describe 'Gate' do
   umeda = Gate.new(:umeda)
   juso = Gate.new(:juso)
+  mikuni = Gate.new(:mikuni)
   
   context '150円の切符を購入して、' do
     ticket = Ticket.new(150)
@@ -13,6 +14,10 @@ RSpec.describe 'Gate' do
 
       it '十三で出場することができる' do
         expect(juso.exit(ticket)).to eq true
+      end
+
+      it '三国で出場することができない' do
+        expect(mikuni.exit(ticket)).to eq false
       end
     end
   end
