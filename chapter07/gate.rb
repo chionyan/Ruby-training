@@ -1,7 +1,7 @@
 # 駅改札口の操作を行うクラス
 class Gate
-  STATIONS = [:umeda, :juso, :mikuni]
-  FARES = [150, 190]
+  STATIONS = [:umeda, :juso, :mikuni].freeze
+  FARES = [150, 190].freeze
 
   # 駅改札口を作成
   # 
