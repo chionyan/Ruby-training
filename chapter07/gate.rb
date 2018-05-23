@@ -10,15 +10,14 @@ class Gate
     @name = name
   end
 
-  # 入場した駅でTicket#stampを行う
+  # 入場駅でチケットに駅名を記録する
   # 
   # @param ticket [Ticket] Ticketクラスのインスタンス
   def enter(ticket)
     ticket.stamp(@name)
   end
 
-  # 出場した駅でGate#calc_fareを行いfareに代入
-  # fareとTicket#fareを比較した結果を返す
+  # 出場駅で実際にかかる運賃の計算を行い、チケットの運賃と比較した結果を返す
   # 
   # @param ticket [Ticket] Ticketクラスのインスタンス
   # @return [True] チケットの運賃が実際の運賃以上ならtrue
@@ -28,7 +27,7 @@ class Gate
     fare <= ticket.fare
   end
 
-  # ticketに記録された駅から、Gate#exitを行なった駅間の実際の運賃を求める
+  # チケットに記録された入場駅から、出場駅までで実際にかかる運賃を計算する
   # 
   # @param ticket [Ticket] Ticketクラスのインスタンス
   # @return [Integer] 実際にかかる運賃 

@@ -12,7 +12,7 @@ class Ticket
     @fare = fare
   end
 
-  # 入場した駅名を@stamped_atに記録
+  # 入場した駅名をチケットに記録
   # 
   # @param name [String] 入場した駅名
   def stamp(name)
