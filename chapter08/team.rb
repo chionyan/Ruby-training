@@ -1,5 +1,6 @@
 require_relative './deep_freezable'
 
+# DeepFreezable をミックスインするクラス 1
 class Team
   extend DeepFreezable
 
