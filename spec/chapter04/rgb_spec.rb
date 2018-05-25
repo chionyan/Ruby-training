@@ -1,4 +1,4 @@
-require_relative '../chapter04/rgb'
+require './chapter04/rgb'
 
 RSpec.describe 'Conversion RGB' do
   describe '#to_hex' do

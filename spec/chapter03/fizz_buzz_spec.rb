@@ -1,4 +1,4 @@
-require_relative '../chapter03/fizz_buzz'
+require './chapter03/fizz_buzz'
 
 RSpec.describe 'Fizz Buzz' do
   example 'fizz_buzz' do
