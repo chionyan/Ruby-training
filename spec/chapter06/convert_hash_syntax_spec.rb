@@ -1,4 +1,4 @@
-require_relative '../chapter06/convert_hash_syntax'
+require './chapter06/convert_hash_syntax'
 
 RSpec.describe 'Convert Hash Syntax' do
   describe '#convert_hash_syntax' do

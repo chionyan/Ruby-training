@@ -1,5 +1,5 @@
-require_relative '../chapter07/gate'
-require_relative '../chapter07/ticket'
+require './chapter07/gate'
+require './chapter07/ticket'
 
 RSpec.describe Gate do
   let(:umeda) { Gate.new(:umeda) }

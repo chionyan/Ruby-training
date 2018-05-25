@@ -1,4 +1,4 @@
-require_relative '../chapter05/convert_length'
+require './chapter05/convert_length'
 
 RSpec.describe 'Conversion Length' do
   describe '#convert_length' do
