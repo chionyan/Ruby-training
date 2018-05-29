@@ -3,7 +3,7 @@ class RegexpChecker
   # テキスト、正規表現パターンを受け取り、結果を表示する
   def run
     text = input_text
-    regexp = conv_regexp
+    regexp = try_conv_regexp
     output_result(text, regexp)
   end
 
@@ -26,21 +26,21 @@ class RegexpChecker
   end
 
   # 受け取った正規表現パターンを Regexp クラスに変換する
-  # エラーが起きた場合、3回まで再入力させる
   # 
   # return [Regexp] 文字列から変換された正規表現クラス
-  def conv_regexp
-    retry_count = 0
+  def conv_regexp(pattern)
+    Regexp.new(pattern)
+  end
+
+  # #conv_regexp を実行し、エラーが起きた場合再入力させる
+  # 
+  # return [Regexp] Regexp クラス
+  def try_conv_regexp
     begin
-      Regexp.new(input_pattern)
+      conv_regexp(input_pattern)
     rescue RegexpError => e
-      retry_count += 1
-      if retry_count <= 3
-        puts "Invalid pattern: #{e.message}"
-        retry
-      else
-        puts "Quit."
-      end
+      puts "Invalid pattern: #{e.message}"
+      retry
     end
   end
 
