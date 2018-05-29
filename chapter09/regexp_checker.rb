@@ -4,7 +4,7 @@ class RegexpChecker
   def run
     text = input_text
     regexp = conv_regexp
-    output(text, regexp)
+    output_result(text, regexp)
   end
 
   private
@@ -48,7 +48,7 @@ class RegexpChecker
   # 
   # @params text [String] テキスト
   # @params regexp [Regexp] 正規表現パターン
-  def output(text, regexp)
+  def output_result(text, regexp)
     matches = text.scan(regexp)
     if matches.size > 0
       puts "Matched: #{matches.join(',')}"
