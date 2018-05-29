@@ -28,7 +28,7 @@ RSpec.describe RegexpChecker do
     let(:pattern){ '[1-6+' }
     it 'エラーが発生すること' do
       allow(@regexp_checker).to receive(:conv_regexp).once
-      expect{ @regexp_checker.run }.to raise_error(StandardError)
+      expect{ @regexp_checker.run }.to raise_error(TypeError)
     end
   end
 end
