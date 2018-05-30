@@ -18,4 +18,16 @@ RSpec.describe WordSynth do
       expect(subject).to eq 'ybuR si !nuf'
     end
   end
+
+  context '複数のエフェクトをかけた場合' do
+    before do
+      synth.add_effect(Effects.echo(2))
+      synth.add_effect(Effects.loud(3))
+      synth.add_effect(Effects.reverse)
+    end
+
+    it '複数のエフェクトがかかった文字列を返すこと' do
+      expect(subject).to eq '!!!YYBBUURR !!!SSII !!!!!NNUUFF'
+    end
+  end
 end
