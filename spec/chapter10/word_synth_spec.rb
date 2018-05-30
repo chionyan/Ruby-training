@@ -10,4 +10,12 @@ RSpec.describe WordSynth do
       expect(subject).to eq 'Ruby is fun!'
     end
   end
+
+  context 'リバースエフェクトをかけた場合' do
+    before { synth.add_effect(Effects.reverse) }
+
+    it '各単語を逆順にすること' do
+      expect(subject).to eq 'ybuR si !nuf'
+    end
+  end
 end
