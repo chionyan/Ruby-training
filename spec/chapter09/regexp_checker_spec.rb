@@ -2,7 +2,7 @@ require './chapter09/regexp_checker'
 
 RSpec.describe RegexpChecker do
   let!(:regexp_checker){ RegexpChecker.new }
-  
+
   before do
     allow(regexp_checker).to receive(:input_text).and_return(text)
     allow(regexp_checker).to receive(:input_pattern).and_return(pattern)
@@ -31,7 +31,7 @@ RSpec.describe RegexpChecker do
     let(:pattern){ '[1-6+' }
 
     it 'エラーが発生すること' do
-      allow(regexp_checker).to receive(:conv_regexp).once
+      allow(Regexp).to receive(:new).once
       expect{ regexp_checker.run }.to raise_error(TypeError)
     end
   end

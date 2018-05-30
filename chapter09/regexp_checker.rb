@@ -3,7 +3,7 @@ class RegexpChecker
   # テキスト、正規表現パターンを受け取り、結果を表示する
   def run
     text = input_text
-    regexp = try_conv_regexp
+    regexp = conv_regexp
     output_result(text, regexp)
   end
 
@@ -26,18 +26,12 @@ class RegexpChecker
   end
 
   # 受け取った正規表現パターンを Regexp クラスに変換する
-  # 
-  # return [Regexp] 文字列から変換された正規表現クラス
-  def conv_regexp(pattern)
-    Regexp.new(pattern)
-  end
-
-  # #conv_regexp を実行し、エラーが起きた場合再入力させる
+  # エラーが発生した場合、再入力させる
   # 
   # return [Regexp] Regexp クラス
-  def try_conv_regexp
+  def conv_regexp
     begin
-      conv_regexp(input_pattern)
+      Regexp.new(input_pattern)
     rescue RegexpError => e
       puts "Invalid pattern: #{e.message}"
       retry
