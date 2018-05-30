@@ -32,4 +32,24 @@ RSpec.describe Effects do
       end
     end
   end
+
+  context 'ラウドエフェクトをかけた場合' do
+    let(:effect){ Effects.loud(level) }
+
+    context '2回かけた場合' do
+      let(:level){ 2 }
+
+      it '全て大文字に変換し、各単語の末尾に2回"!"をつけること' do
+        expect(effect.call('Ruby is fun!')).to eq 'RUBY!! IS!! FUN!!!'
+      end
+    end
+
+    context '3回かけた場合' do
+      let(:level){ 3 }
+
+      it '全て大文字に変換し、各単語の末尾に3回"!"をつけること' do
+        expect(effect.call('Ruby is fun!')).to eq 'RUBY!!! IS!!! FUN!!!!'
+      end
+    end
+  end
 end
