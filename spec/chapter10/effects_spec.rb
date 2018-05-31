@@ -1,10 +1,6 @@
 require './chapter10/lib/effects'
 
 RSpec.describe Effects do
-  it 'Effects が参照できること' do
-    expect(Effects).to be_truthy
-  end
-
   context 'リバースエフェクトをかけた場合' do
     let(:effect){ Effects.reverse }
 
